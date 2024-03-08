@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                 ('overview', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('owner', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='course_created', to=settings.AUTH_USER_MODEL)),
-                ('subject', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='course', to='courses.subject')),
+                ('subject', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='courses', to='courses.subject')),
             ],
             options={
                 'ordering': ['-created'],
